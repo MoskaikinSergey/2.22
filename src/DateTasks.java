@@ -6,11 +6,11 @@ import java.util.Scanner;
 
 public class DateTasks {
     public static void main(String[] args) throws ParseException {
-        Scanner scanner = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
         System.out.println("Введите дату в формате dd.MM.yyyy:");
-        String inputDate = scanner.nextLine();
+        String inputDate = in.nextLine();
         Date date = dateFormat.parse(inputDate);
 
         // Задание 1: Увеличить дату на 45 дней
@@ -33,7 +33,8 @@ public class DateTasks {
 
         // Задание 4: Ввод второй даты
         System.out.println("Введите вторую дату в формате dd.MM.yyyy:");
-        String secondInputDate = scanner.nextLine();
+        String secondInputDate = in.nextLine();
+        in.close();
         Date secondDate = dateFormat.parse(secondInputDate);
 
         // Задание 5: Посчитать количество рабочих дней между датами
